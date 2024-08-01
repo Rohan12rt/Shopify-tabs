@@ -13,7 +13,47 @@
   <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
+<style>
+.tab-container {
+    margin-bottom: 20px;
+}
+.tab-container a {
+    border: 1px solid;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    /* margin-bottom: 34px; */
+}
+.tab-container a.active {
+    border: 1px solid;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    background: rgb(255 55 0);
+    color: white;
+}
 
+.tab-container {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tab-banner {
+    margin: 20px 0px;
+}
+.tab-content-container h2.banner__heading.inline-richtext {
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+ .tab-container a {
+    flex: 0 0 calc(33.333% - 14px);
+    text-align: center;
+    font-size: 12px;
+}
+<style>
 <div class="page-width">
   <div class="tab-container">
     {% for block in section.blocks %}
